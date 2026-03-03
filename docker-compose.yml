@@ -1,0 +1,9 @@
+services:
+    mlflow-container:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: mlflow-image:latest
+        env_file:
+            - .env
+        container_name: mlflow-container
